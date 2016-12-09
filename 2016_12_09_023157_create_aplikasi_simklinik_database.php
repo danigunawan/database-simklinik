@@ -312,7 +312,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->integer('subtotal');
                 $table->integer('potongan');
                 $table->integer('tax');
-                $table->string('status', 100);
+                $table->string('status', 100)->nullable();
                 $table->integer('sisa');
             });
 
@@ -344,7 +344,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('no_rm', 100)->nullable();
                 $table->string('tipe_produk', 100)->nullable();
                 $table->string('dosis', 100)->nullable();
-                $table->string('lab', 25);
+                $table->string('lab', 25)->nullable();
             });
 
 
@@ -596,7 +596,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('no_faktur', 100);
                 $table->string('keterangan', 100)->nullable();
                 $table->string('dari_akun', 100);
-                $table->string('ke_akun', 100);
+                $table->string('ke_akun', 100)->nullable();
                 $table->integer('jumlah');
                 $table->date('tanggal');
                 $table->('jam');
@@ -827,6 +827,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
+                $table->string('user_editt', 100)->nullable();
+                $table->datetime('waktu_edit', 100)->nullable();
                 $table->string('user_hapus', 100);
             });
 
@@ -843,6 +845,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
+                $table->string('user_edit', 100)->nullable();
+                $table->string('waktu_edit', 100)->nullable();
                 $table->string('user_hapus', 100);
             });
 
@@ -860,6 +864,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
+                $table->string('user_edit', 100)->nullable();
+                $table->datetime('waktu_edit', 100)->nullable();
                 $table->string('user_hapus', 100);
             });
 
@@ -876,8 +882,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('keterangan', 100)->nullable();
                 $table->integer('total');
                 $table->string('user_buat', 100);
-                $table->string('user_edit', 100);
-                $table->date('tanggal_edit');
+                $table->string('user_edit', 100)->nullable();
+                $table->date('tanggal_edit')->nullable();
                 $table->string('dari_kas', 100);
                 $table->string('user_hapus', 100);
             });
@@ -895,8 +901,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('keterangan', 100)->nullable();
                 $table->integer('total');
                 $table->string('user_buat', 100);
-                $table->string('user_edit', 100);
-                $table->date('tanggal_edit');
+                $table->string('user_edit', 100)->nullable();
+                $table->date('tanggal_edit')->nullable();
                 $table->string('dari_kas', 100);
                 $table->string('user_hapus', 100);
             });
@@ -1005,7 +1011,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('no_faktur_retur', 100);
                 $table->date('tanggal')->nullable();
                 $table->('jam');
-                $table->string('nama_barang', 100);
+                $table->string('nama_barang', 100)->nullable();
                 $table->string('kode_pelanggan', 100);
                 $table->string('keterangan', 100)->nullable();
                 $table->integer('total');
@@ -1105,7 +1111,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->integer('total_nilai');
                 $table->date('tanggal');
                 $table->('jam');
-                $table->dateTime('waktu');
+                $table->dateTime('waktu')->nullable();
                 $table->integer('sisa_barang');
                 $table->integer('jenis_hpp');
             });
@@ -1117,7 +1123,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	    Schema::create('hpp_masuk', function($table) {
                 $table->increments('id');
                 $table->string('no_faktur', 100);
-                $table->string('no_faktur_hpp_keluar', 100);
+                $table->string('no_faktur_hpp_keluar', 100)->nullable();
                 $table->string('no_faktur_hpp_masuk', 100)->nullable();
                 $table->string('kode_barang', 100);
                 $table->string('jenis_transaksi', 100);
@@ -1284,6 +1290,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
+                $table->string('user_edit', 100)->nullable();
                 $table->dateTime('waktu_edit')->nullable();
             });
 
@@ -1300,7 +1307,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
-                $table->string('status_upload', 25);
+                $table->string('status_upload', 25)->nullable();
+                $table->string('user_edit', 100)->nullable();
                 $table->dateTime('waktu_edit')->nullable();
             });
 
@@ -1318,6 +1326,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->date('tanggal');
                 $table->('jam');
                 $table->string('user', 100);
+                $table->string('user_edit', 100)->nullable();
                 $table->dateTime('waktu_edit')->nullable();
             });
 
@@ -1875,7 +1884,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('keterangan', 100)->nullable();
                 $table->integer('total');
                 $table->string('user_buat', 100);
-                $table->string('user_edit', 100);
+                $table->string('user_edit', 100)->nullable();
                 $table->date('tanggal_edit')->nullable();
                 $table->string('dari_kas', 100);
             });
@@ -1893,7 +1902,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('keterangan', 100)->nullable();
                 $table->integer('total');
                 $table->string('user_buat', 100);
-                $table->string('user_edit', 100);
+                $table->string('user_edit', 100)->nullable();
                 $table->date('tanggal_edit')->nullable();
                 $table->string('dari_kas', 100);
             });
@@ -1974,7 +1983,7 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('analis', 100)->nullable();
                 $table->string('apoteker', 100);
                 $table->string('perawat', 100);
-                $table->string('petugas_lain', 100);
+                $table->string('petugas_lain', 100)->nullable();
                 $table->integer('biaya_admin');
                 $table->string('kode_gudang', 100);
                 $table->string('kode_pelanggan', 50);
@@ -2108,12 +2117,12 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->text('alamat');
                 $table->string('umur', 100);
                 $table->string('jenis_kelamin', 100);
-                $table->string('sistole_distole', 100);
-                $table->string('suhu', 100);
-                $table->string('berat_badan', 100);
-                $table->string('tinggi_badan', 100);
-                $table->string('nadi', 100);
-                $table->string('respiratory', 100);
+                $table->string('sistole_distole', 100)->nullable();
+                $table->string('suhu', 100)->nullable();
+                $table->string('berat_badan', 100)->nullable();
+                $table->string('tinggi_badan', 100)->nullable();
+                $table->string('nadi', 100)->nullable();
+                $table->string('respiratory', 100)->nullable();
                 $table->string('poli', 100);
                 $table->string('anamnesa', 100)->nullable();
                 $table->string('pemeriksaan_fisik', 100)->nullable();
@@ -2125,8 +2134,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('icd_komplikasi', 100)->nullable();
                 $table->string('kode_utama', 100)->nullable();
                 $table->string('kode_penyerta', 100)->nullable();
-                $table->string('kode_penyerta_tambahan', 100);
-                $table->string('icd_penyerta_tambahan', 100);
+                $table->string('kode_penyerta_tambahan', 100)->nullable();
+                $table->string('icd_penyerta_tambahan', 100)->nullable();
                 $table->string('kode_komplikasi', 100)->nullable();
                 $table->string('tanggal_periksa', 100);
                 $table->('jam');
@@ -2151,12 +2160,12 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->text('alamat');
                 $table->string('umur', 100);
                 $table->string('jenis_kelamin', 100);
-                $table->string('sistole_distole', 100);
-                $table->string('suhu', 100);
-                $table->string('berat_badan', 100);
-                $table->string('tinggi_badan', 100);
-                $table->string('nadi', 100);
-                $table->string('respiratory', 100);
+                $table->string('sistole_distole', 100)->nullable();
+                $table->string('suhu', 100)->nullable();
+                $table->string('berat_badan', 100)->nullable();
+                $table->string('tinggi_badan', 100)->nullable();
+                $table->string('nadi', 100)->nullable();
+                $table->string('respiratory', 100)->nullable();
                 $table->string('poli', 100);
                 $table->string('anamnesa', 100)->nullable();
                 $table->string('pemeriksaan_fisik', 100)->nullable();
@@ -2165,11 +2174,11 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
                 $table->string('kesadaran', 100)->nullable();
                 $table->string('icd_utama', 100)->nullable();
                 $table->string('icd_penyerta', 100)->nullable();
-                $table->string('icd_penyerta_tambahan', 100);
+                $table->string('icd_penyerta_tambahan', 100)->nullable();
                 $table->string('icd_komplikasi', 100)->nullable();
                 $table->string('kode_utama', 100)->nullable();
                 $table->string('kode_penyerta', 100)->nullable();
-                $table->string('kode_penyerta_tambahan', 100);
+                $table->string('kode_penyerta_tambahan', 100)->nullable();
                 $table->string('kode_komplikasi', 100)->nullable();
                 $table->date('tanggal_periksa');
                 $table->('jam');
@@ -2575,8 +2584,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_kas_keluar', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur', 100);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur', 100)->nullable();
                 $table->string('keterangan', 100)->nullable();
                 $table->string('dari_akun', 100);
                 $table->string('ke_akun', 100);
@@ -2592,8 +2601,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_kas_masuk', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur', 100);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur', 100)->nullable();
                 $table->string('keterangan', 100)->nullable();
                 $table->string('dari_akun', 100);
                 $table->string('ke_akun', 100);
@@ -2625,8 +2634,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_pembayaran_hutang', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur_pembayaran', 100);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur_pembayaran', 100)->nullable();
                 $table->string('no_faktur_pembelian', 100);
                 $table->date('tanggal');
                 $table->date('tanggal_jt');
@@ -2643,8 +2652,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_pembayaran_piutang', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur_pembayaran', 100);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur_pembayaran', 100)->nullable();
                 $table->string('no_faktur_penjualan', 100);
                 $table->date('tanggal');
                 $table->date('tanggal_jt');
@@ -2661,8 +2670,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_pembelian', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur', 50);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur', 50)->nullable();
                 $table->string('kode_barang', 50);
                 $table->string('nama_barang', 50);
                 $table->integer('jumlah_barang');
@@ -2728,8 +2737,8 @@ class CreateAplikasi_SimklinikDatabase extends Migration {
 	     */
 	    Schema::create('tbs_retur_penjualan', function($table) {
                 $table->increments('id');
-                $table->string('session_id', 100);
-                $table->string('no_faktur_retur', 100);
+                $table->string('session_id', 100)->nullable();
+                $table->string('no_faktur_retur', 100)->nullable();
                 $table->string('no_faktur_penjualan', 100);
                 $table->string('nama_barang', 100);
                 $table->string('kode_barang', 100);
