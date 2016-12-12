@@ -79763,7 +79763,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_item_keluar')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'item_keluar_lihat' => 1,
                 'item_keluar_tambah' => 1,
@@ -79772,7 +79772,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'item_keluar_lihat' => 0,
                 'item_keluar_tambah' => 0,
@@ -79781,7 +79781,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'item_keluar_lihat' => 0,
                 'item_keluar_tambah' => 0,
@@ -79790,7 +79790,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'item_keluar_lihat' => 0,
                 'item_keluar_tambah' => 0,
@@ -79799,7 +79799,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'item_keluar_lihat' => 0,
                 'item_keluar_tambah' => 0,
@@ -79808,7 +79808,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'item_keluar_lihat' => 0,
                 'item_keluar_tambah' => 0,
@@ -79820,7 +79820,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_item_masuk')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'item_masuk_lihat' => 1,
                 'item_masuk_tambah' => 1,
@@ -79829,7 +79829,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'item_masuk_lihat' => 0,
                 'item_masuk_tambah' => 0,
@@ -79838,7 +79838,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'item_masuk_lihat' => 0,
                 'item_masuk_tambah' => 0,
@@ -79847,7 +79847,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'item_masuk_lihat' => 0,
                 'item_masuk_tambah' => 0,
@@ -79856,7 +79856,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'item_masuk_lihat' => 0,
                 'item_masuk_tambah' => 0,
@@ -79865,7 +79865,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'item_masuk_lihat' => 0,
                 'item_masuk_tambah' => 0,
@@ -79877,7 +79877,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_kas')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'kas_lihat' => 1,
                 'kas_edit' => 1,
@@ -79885,7 +79885,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'kas_lihat' => 0,
                 'kas_edit' => 0,
@@ -79893,7 +79893,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'kas_lihat' => 0,
                 'kas_edit' => 0,
@@ -79901,7 +79901,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'kas_lihat' => 0,
                 'kas_edit' => 0,
@@ -79909,7 +79909,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'kas_lihat' => 0,
                 'kas_edit' => 0,
@@ -79917,7 +79917,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'kas_lihat' => 0,
                 'kas_edit' => 0,
@@ -79928,7 +79928,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_kas_keluar')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'kas_keluar_lihat' => 1,
                 'kas_keluar_tambah' => 1,
@@ -79937,7 +79937,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'kas_keluar_lihat' => 0,
                 'kas_keluar_tambah' => 0,
@@ -79946,7 +79946,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'kas_keluar_lihat' => 0,
                 'kas_keluar_tambah' => 0,
@@ -79955,7 +79955,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'kas_keluar_lihat' => 0,
                 'kas_keluar_tambah' => 0,
@@ -79964,7 +79964,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'kas_keluar_lihat' => 0,
                 'kas_keluar_tambah' => 0,
@@ -79973,7 +79973,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'kas_keluar_lihat' => 0,
                 'kas_keluar_tambah' => 0,
@@ -79985,7 +79985,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_kas_masuk')->insert(array(
             
             array(
-                'id' => 37,
+                
                 'id_otoritas' => 71,
                 'kas_masuk_lihat' => 1,
                 'kas_masuk_tambah' => 1,
@@ -79994,7 +79994,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 38,
+                
                 'id_otoritas' => 72,
                 'kas_masuk_lihat' => 0,
                 'kas_masuk_tambah' => 0,
@@ -80003,7 +80003,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 39,
+                
                 'id_otoritas' => 73,
                 'kas_masuk_lihat' => 0,
                 'kas_masuk_tambah' => 0,
@@ -80012,7 +80012,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 40,
+                
                 'id_otoritas' => 74,
                 'kas_masuk_lihat' => 0,
                 'kas_masuk_tambah' => 0,
@@ -80021,7 +80021,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 41,
+                
                 'id_otoritas' => 75,
                 'kas_masuk_lihat' => 0,
                 'kas_masuk_tambah' => 0,
@@ -80030,7 +80030,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 42,
+                
                 'id_otoritas' => 76,
                 'kas_masuk_lihat' => 0,
                 'kas_masuk_tambah' => 0,
@@ -80042,7 +80042,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_kas_mutasi')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'kas_mutasi_lihat' => 1,
                 'kas_mutasi_tambah' => 1,
@@ -80051,7 +80051,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'kas_mutasi_lihat' => 0,
                 'kas_mutasi_tambah' => 0,
@@ -80060,7 +80060,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'kas_mutasi_lihat' => 0,
                 'kas_mutasi_tambah' => 0,
@@ -80069,7 +80069,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'kas_mutasi_lihat' => 0,
                 'kas_mutasi_tambah' => 0,
@@ -80078,7 +80078,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'kas_mutasi_lihat' => 0,
                 'kas_mutasi_tambah' => 0,
@@ -80087,7 +80087,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'kas_mutasi_lihat' => 0,
                 'kas_mutasi_tambah' => 0,
@@ -80099,7 +80099,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_laporan')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'laporan_mutasi_stok_lihat' => 1,
                 'akuntansi_lihat' => 1,
@@ -80138,7 +80138,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'laporan_mutasi_stok_lihat' => 0,
                 'akuntansi_lihat' => 0,
@@ -80177,7 +80177,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'laporan_mutasi_stok_lihat' => 0,
                 'akuntansi_lihat' => 0,
@@ -80216,7 +80216,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'laporan_mutasi_stok_lihat' => 0,
                 'akuntansi_lihat' => 0,
@@ -80255,7 +80255,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'laporan_mutasi_stok_lihat' => 0,
                 'akuntansi_lihat' => 0,
@@ -80294,7 +80294,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'laporan_mutasi_stok_lihat' => 0,
                 'akuntansi_lihat' => 0,
@@ -80336,7 +80336,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_master_data')->insert(array(
             
             array(
-                'id' => 30,
+                
                 'id_otoritas' => 71,
                 'master_data_lihat' => 1,
                 'user_lihat' => 1,
@@ -80451,7 +80451,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 31,
+                
                 'id_otoritas' => 72,
                 'master_data_lihat' => 0,
                 'user_lihat' => 0,
@@ -80566,7 +80566,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 32,
+                
                 'id_otoritas' => 73,
                 'master_data_lihat' => 0,
                 'user_lihat' => 0,
@@ -80681,7 +80681,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 33,
+                
                 'id_otoritas' => 74,
                 'master_data_lihat' => 0,
                 'user_lihat' => 0,
@@ -80796,7 +80796,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 34,
+                
                 'id_otoritas' => 75,
                 'master_data_lihat' => 0,
                 'user_lihat' => 0,
@@ -80911,7 +80911,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 35,
+                
                 'id_otoritas' => 76,
                 'master_data_lihat' => 0,
                 'user_lihat' => 0,
@@ -81029,7 +81029,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_pembayaran')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'pembayaran_lihat' => 1,
                 'pembayaran_hutang_lihat' => 1,
@@ -81043,7 +81042,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'pembayaran_lihat' => 0,
                 'pembayaran_hutang_lihat' => 0,
@@ -81057,7 +81055,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'pembayaran_lihat' => 0,
                 'pembayaran_hutang_lihat' => 0,
@@ -81071,7 +81068,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'pembayaran_lihat' => 0,
                 'pembayaran_hutang_lihat' => 0,
@@ -81085,7 +81081,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'pembayaran_lihat' => 0,
                 'pembayaran_hutang_lihat' => 0,
@@ -81099,7 +81094,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'pembayaran_lihat' => 0,
                 'pembayaran_hutang_lihat' => 0,
@@ -81116,7 +81110,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_pembelian')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'pembelian_lihat' => 1,
                 'pembelian_tambah' => 1,
@@ -81129,7 +81122,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'pembelian_lihat' => 0,
                 'pembelian_tambah' => 0,
@@ -81142,7 +81134,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'pembelian_lihat' => 0,
                 'pembelian_tambah' => 0,
@@ -81155,7 +81146,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'pembelian_lihat' => 0,
                 'pembelian_tambah' => 0,
@@ -81168,7 +81158,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'pembelian_lihat' => 0,
                 'pembelian_tambah' => 0,
@@ -81181,7 +81170,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'pembelian_lihat' => 0,
                 'pembelian_tambah' => 0,
@@ -81197,7 +81185,7 @@ class Simklinik extends Seeder {
         DB::table('otoritas_penjualan')->insert(array(
             
             array(
-                'id' => 16,
+                
                 'id_otoritas' => 71,
                 'penjualan_lihat' => 1,
                 'penjualan_tambah' => 1,
@@ -81211,7 +81199,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 17,
+                
                 'id_otoritas' => 72,
                 'penjualan_lihat' => 0,
                 'penjualan_tambah' => 0,
@@ -81225,7 +81213,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 18,
+                
                 'id_otoritas' => 73,
                 'penjualan_lihat' => 0,
                 'penjualan_tambah' => 0,
@@ -81239,7 +81227,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 19,
+                
                 'id_otoritas' => 74,
                 'penjualan_lihat' => 0,
                 'penjualan_tambah' => 0,
@@ -81253,7 +81241,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 20,
+                
                 'id_otoritas' => 75,
                 'penjualan_lihat' => 0,
                 'penjualan_tambah' => 0,
@@ -81267,7 +81255,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 21,
+                
                 'id_otoritas' => 76,
                 'penjualan_lihat' => 0,
                 'penjualan_tambah' => 0,
@@ -81284,42 +81272,36 @@ class Simklinik extends Seeder {
         DB::table('otoritas_persediaan')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'persediaan_lihat' => 1,
                 'kartu_stok_lihat' => 1,
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'persediaan_lihat' => 0,
                 'kartu_stok_lihat' => 0,
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'persediaan_lihat' => 0,
                 'kartu_stok_lihat' => 0,
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'persediaan_lihat' => 0,
                 'kartu_stok_lihat' => 0,
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'persediaan_lihat' => 0,
                 'kartu_stok_lihat' => 0,
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'persediaan_lihat' => 0,
                 'kartu_stok_lihat' => 0,
@@ -81329,7 +81311,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_registrasi')->insert(array(
             
             array(
-                'id' => 8,
                 'id_otoritas' => 71,
                 'registrasi_lihat' => 1,
                 'registrasi_rj_lihat' => 1,
@@ -81347,7 +81328,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 9,
                 'id_otoritas' => 72,
                 'registrasi_lihat' => 0,
                 'registrasi_rj_lihat' => 0,
@@ -81365,7 +81345,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 10,
+                
                 'id_otoritas' => 73,
                 'registrasi_lihat' => 0,
                 'registrasi_rj_lihat' => 0,
@@ -81383,7 +81363,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 11,
+                
                 'id_otoritas' => 74,
                 'registrasi_lihat' => 0,
                 'registrasi_rj_lihat' => 0,
@@ -81401,7 +81381,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 12,
+                
                 'id_otoritas' => 75,
                 'registrasi_lihat' => 0,
                 'registrasi_rj_lihat' => 0,
@@ -81419,7 +81399,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 13,
+                
                 'id_otoritas' => 76,
                 'registrasi_lihat' => 0,
                 'registrasi_rj_lihat' => 0,
@@ -81440,7 +81420,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_rekam_medik')->insert(array(
             
             array(
-                'id' => 9,
                 'id_otoritas' => 71,
                 'rekam_medik_lihat' => 1,
                 'rekam_medik_rj_lihat' => 1,
@@ -81458,7 +81437,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 10,
+                
                 'id_otoritas' => 72,
                 'rekam_medik_lihat' => 0,
                 'rekam_medik_rj_lihat' => 0,
@@ -81476,7 +81455,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 11,
+                
                 'id_otoritas' => 73,
                 'rekam_medik_lihat' => 0,
                 'rekam_medik_rj_lihat' => 0,
@@ -81494,7 +81473,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 12,
+                
                 'id_otoritas' => 74,
                 'rekam_medik_lihat' => 0,
                 'rekam_medik_rj_lihat' => 0,
@@ -81512,7 +81491,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 13,
+                
                 'id_otoritas' => 75,
                 'rekam_medik_lihat' => 0,
                 'rekam_medik_rj_lihat' => 0,
@@ -81530,7 +81509,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 14,
+                
                 'id_otoritas' => 76,
                 'rekam_medik_lihat' => 0,
                 'rekam_medik_rj_lihat' => 0,
@@ -81551,7 +81530,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_setting')->insert(array(
             
             array(
-                'id' => 6,
                 'id_otoritas' => 71,
                 'setting_lihat' => 1,
                 'setting_registrasi_lihat' => 1,
@@ -81560,7 +81538,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 72,
                 'setting_lihat' => 0,
                 'setting_registrasi_lihat' => 0,
@@ -81569,7 +81546,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 8,
                 'id_otoritas' => 73,
                 'setting_lihat' => 0,
                 'setting_registrasi_lihat' => 0,
@@ -81578,7 +81554,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 9,
                 'id_otoritas' => 74,
                 'setting_lihat' => 0,
                 'setting_registrasi_lihat' => 0,
@@ -81587,7 +81562,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 10,
+                
                 'id_otoritas' => 75,
                 'setting_lihat' => 0,
                 'setting_registrasi_lihat' => 0,
@@ -81596,7 +81571,7 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 11,
+                
                 'id_otoritas' => 76,
                 'setting_lihat' => 0,
                 'setting_registrasi_lihat' => 0,
@@ -81608,7 +81583,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_stok_awal')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'stok_awal_lihat' => 1,
                 'stok_awal_tambah' => 1,
@@ -81617,7 +81591,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'stok_awal_lihat' => 0,
                 'stok_awal_tambah' => 0,
@@ -81626,7 +81599,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'stok_awal_lihat' => 0,
                 'stok_awal_tambah' => 0,
@@ -81635,7 +81607,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'stok_awal_lihat' => 0,
                 'stok_awal_tambah' => 0,
@@ -81644,7 +81615,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'stok_awal_lihat' => 0,
                 'stok_awal_tambah' => 0,
@@ -81653,7 +81623,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'stok_awal_lihat' => 0,
                 'stok_awal_tambah' => 0,
@@ -81665,7 +81634,6 @@ class Simklinik extends Seeder {
         DB::table('otoritas_stok_opname')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'stok_opname_lihat' => 1,
                 'stok_opname_tambah' => 1,
@@ -81674,7 +81642,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'stok_opname_lihat' => 0,
                 'stok_opname_tambah' => 0,
@@ -81683,7 +81650,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'stok_opname_lihat' => 0,
                 'stok_opname_tambah' => 0,
@@ -81692,7 +81658,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'stok_opname_lihat' => 0,
                 'stok_opname_tambah' => 0,
@@ -81701,7 +81666,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'stok_opname_lihat' => 0,
                 'stok_opname_tambah' => 0,
@@ -81710,7 +81674,6 @@ class Simklinik extends Seeder {
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'stok_opname_lihat' => 0,
                 'stok_opname_tambah' => 0,
@@ -81722,37 +81685,31 @@ class Simklinik extends Seeder {
         DB::table('otoritas_transaksi_kas')->insert(array(
             
             array(
-                'id' => 2,
                 'id_otoritas' => 71,
                 'transaksi_kas_lihat' => 1,
             ),
 
             array(
-                'id' => 3,
                 'id_otoritas' => 72,
                 'transaksi_kas_lihat' => 0,
             ),
 
             array(
-                'id' => 4,
                 'id_otoritas' => 73,
                 'transaksi_kas_lihat' => 0,
             ),
 
             array(
-                'id' => 5,
                 'id_otoritas' => 74,
                 'transaksi_kas_lihat' => 0,
             ),
 
             array(
-                'id' => 6,
                 'id_otoritas' => 75,
                 'transaksi_kas_lihat' => 0,
             ),
 
             array(
-                'id' => 7,
                 'id_otoritas' => 76,
                 'transaksi_kas_lihat' => 0,
             ),

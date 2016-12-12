@@ -1129,13 +1129,13 @@ class CreateAplikasiSimklinikDatabase extends Migration {
                 $table->string('jenis_transaksi', 100);
                 $table->integer('jumlah_kuantitas');
                 $table->float('harga_unit');
-                $table->integer('sisa_harga');
+                $table->integer('sisa_harga')->default(0);
                 $table->integer('total_nilai');
                 $table->integer('sisa');
-                $table->integer('sisa_retur');
+                $table->integer('sisa_retur')->default(0);
                 $table->date('tanggal');
                 $table->time('jam');
-                $table->string('waktu');
+                $table->string('waktu')->nullable();
                 $table->integer('jenis_hpp')->default("1");
             });
 
@@ -1421,10 +1421,11 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_item_keluar', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('item_keluar_lihat');
-                $table->integer('item_keluar_tambah');
-                $table->integer('item_keluar_edit');
-                $table->integer('item_keluar_hapus');
+                $table->integer('item_keluar_lihat')->default(0);
+                $table->integer('item_keluar_tambah')->default(0);
+                $table->integer('item_keluar_edit')->default(0);
+                $table->integer('item_keluar_hapus')->default(0);
+
             });
 
 
@@ -1434,10 +1435,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_item_masuk', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('item_masuk_lihat');
-                $table->integer('item_masuk_tambah');
-                $table->integer('item_masuk_edit');
-                $table->integer('item_masuk_hapus');
+                $table->integer('item_masuk_lihat')->default(0);
+                $table->integer('item_masuk_tambah')->default(0);
+                $table->integer('item_masuk_edit')->default(0);
+                $table->integer('item_masuk_hapus')->default(0);
             });
 
 
@@ -1447,9 +1448,9 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_kas', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('kas_lihat');
-                $table->integer('kas_edit');
-                $table->integer('posisi_kas_lihat');
+                $table->integer('kas_lihat')->default(0);
+                $table->integer('kas_edit')->default(0);
+                $table->integer('posisi_kas_lihat')->default(0);
             });
 
 
@@ -1459,10 +1460,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_kas_keluar', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('kas_keluar_lihat');
-                $table->integer('kas_keluar_tambah');
+                $table->integer('kas_keluar_lihat')->default(0);
+                $table->integer('kas_keluar_tambah')->default(0);
                 $table->integer('kas_keluar_edit')->nullable();
-                $table->integer('kas_keluar_hapus');
+                $table->integer('kas_keluar_hapus')->default(0);
             });
 
 
@@ -1472,10 +1473,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_kas_masuk', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('kas_masuk_lihat');
-                $table->integer('kas_masuk_tambah');
-                $table->integer('kas_masuk_edit');
-                $table->integer('kas_masuk_hapus');
+                $table->integer('kas_masuk_lihat')->default(0);
+                $table->integer('kas_masuk_tambah')->default(0);
+                $table->integer('kas_masuk_edit')->default(0);
+                $table->integer('kas_masuk_hapus')->default(0);
             });
 
 
@@ -1485,10 +1486,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_kas_mutasi', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('kas_mutasi_lihat');
-                $table->integer('kas_mutasi_tambah');
-                $table->integer('kas_mutasi_edit');
-                $table->integer('kas_mutasi_hapus');
+                $table->integer('kas_mutasi_lihat')->default(0);
+                $table->integer('kas_mutasi_tambah')->default(0);
+                $table->integer('kas_mutasi_edit')->default(0);
+                $table->integer('kas_mutasi_hapus')->default(0);
             });
 
 
@@ -1498,40 +1499,40 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_laporan', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('laporan_mutasi_stok_lihat');
-                $table->integer('akuntansi_lihat');
-                $table->integer('laporan_lihat');
-                $table->integer('buku_besar_lihat');
-                $table->integer('laporan_jurnal_lihat');
-                $table->integer('laporan_laba_kotor_lihat');
-                $table->integer('laporan_laba_rugi_lihat');
-                $table->integer('laporan_neraca_lihat');
-                $table->integer('transaksi_jurnal_manual_lihat');
-                $table->integer('transaksi_jurnal_manual_tambah');
-                $table->integer('transaksi_jurnal_manual_edit');
-                $table->integer('transaksi_jurnal_manual_hapus');
-                $table->integer('cash_flow_tanggal_lihat');
-                $table->integer('cash_flow_periode_lihat');
-                $table->integer('laporan_pemasukan_tanggal_lihat');
-                $table->integer('laporan_pemasukan_rekap_lihat');
-                $table->integer('laporan_pemasukan_periode_lihat');
-                $table->integer('laporan_pengeluaran_tanggal_lihat');
-                $table->integer('laporan_pengeluaran_rekap_lihat');
-                $table->integer('laporan_pengeluaran_periode_lihat');
-                $table->integer('laporan_komisi_produk_lihat');
-                $table->integer('laporan_komisi_faktur_lihat');
-                $table->integer('laporan_komisi_lihat');
-                $table->integer('laporan_pembelian_lihat');
-                $table->integer('laporan_hutang_beredar_lihat');
-                $table->integer('laporan_penjualan_lihat');
-                $table->integer('laporan_piutang_beredar_lihat');
-                $table->integer('laporan_retur_pembelian_lihat');
-                $table->integer('laporan_retur_penjualan_lihat');
-                $table->integer('laporan_pembayaran_hutang_lihat');
-                $table->integer('laporan_pembayaran_piutang_lihat');
-                $table->integer('laporan_kunjungan_rj');
+                $table->integer('laporan_mutasi_stok_lihat')->default(0);
+                $table->integer('akuntansi_lihat')->default(0);
+                $table->integer('laporan_lihat')->default(0);
+                $table->integer('buku_besar_lihat')->default(0);
+                $table->integer('laporan_jurnal_lihat')->default(0);
+                $table->integer('laporan_laba_kotor_lihat')->default(0);
+                $table->integer('laporan_laba_rugi_lihat')->default(0);
+                $table->integer('laporan_neraca_lihat')->default(0);
+                $table->integer('transaksi_jurnal_manual_lihat')->default(0);
+                $table->integer('transaksi_jurnal_manual_tambah')->default(0);
+                $table->integer('transaksi_jurnal_manual_edit')->default(0);
+                $table->integer('transaksi_jurnal_manual_hapus')->default(0);
+                $table->integer('cash_flow_tanggal_lihat')->default(0);
+                $table->integer('cash_flow_periode_lihat')->default(0);
+                $table->integer('laporan_pemasukan_tanggal_lihat')->default(0);
+                $table->integer('laporan_pemasukan_rekap_lihat')->default(0);
+                $table->integer('laporan_pemasukan_periode_lihat')->default(0);
+                $table->integer('laporan_pengeluaran_tanggal_lihat')->default(0);
+                $table->integer('laporan_pengeluaran_rekap_lihat')->default(0);
+                $table->integer('laporan_pengeluaran_periode_lihat')->default(0);
+                $table->integer('laporan_komisi_produk_lihat')->default(0);
+                $table->integer('laporan_komisi_faktur_lihat')->default(0);
+                $table->integer('laporan_komisi_lihat')->default(0);
+                $table->integer('laporan_pembelian_lihat')->default(0);
+                $table->integer('laporan_hutang_beredar_lihat')->default(0);
+                $table->integer('laporan_penjualan_lihat')->default(0);
+                $table->integer('laporan_piutang_beredar_lihat')->default(0);
+                $table->integer('laporan_retur_pembelian_lihat')->default(0);
+                $table->integer('laporan_retur_penjualan_lihat')->default(0);
+                $table->integer('laporan_pembayaran_hutang_lihat')->default(0);
+                $table->integer('laporan_pembayaran_piutang_lihat')->default(0);
+                $table->integer('laporan_kunjungan_rj')->default(0);
                 $table->integer('laporan_kunjungan_ri')->nullable();
-                $table->integer('laporan_kunjungan_ugd');
+                $table->integer('laporan_kunjungan_ugd')->default(0);
             });
 
 
@@ -1541,116 +1542,116 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_master_data', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('master_data_lihat');
-                $table->integer('user_lihat');
-                $table->integer('user_tambah');
-                $table->integer('user_edit');
-                $table->integer('user_hapus');
-                $table->integer('satuan_lihat');
-                $table->integer('satuan_tambah');
-                $table->integer('satuan_edit');
-                $table->integer('satuan_hapus');
-                $table->integer('jabatan_lihat');
-                $table->integer('jabatan_tambah');
-                $table->integer('jabatan_edit');
-                $table->integer('jabatan_hapus');
-                $table->integer('suplier_lihat');
-                $table->integer('suplier_tambah');
-                $table->integer('suplier_edit');
-                $table->integer('suplier_hapus');
-                $table->integer('pelanggan_lihat');
-                $table->integer('pelanggan_tambah');
-                $table->integer('pelanggan_edit');
-                $table->integer('pelanggan_hapus');
-                $table->integer('item_lihat');
-                $table->integer('item_tambah');
-                $table->integer('item_edit');
-                $table->integer('item_hapus');
-                $table->integer('pemasukan_lihat');
-                $table->integer('pemasukan_tambah');
-                $table->integer('pemasukan_edit');
-                $table->integer('pemasukan_hapus');
-                $table->integer('pengeluaran_lihat');
-                $table->integer('pengeluaran_tambah');
-                $table->integer('pengeluaran_edit');
-                $table->integer('pengeluaran_hapus');
-                $table->integer('komisi_faktur_lihat');
-                $table->integer('komisi_faktur_tambah');
-                $table->integer('komisi_faktur_edit');
-                $table->integer('komisi_faktur_hapus');
-                $table->integer('komisi_produk_lihat');
-                $table->integer('komisi_produk_tambah');
-                $table->integer('komisi_produk_edit');
-                $table->integer('komisi_produk_hapus');
-                $table->integer('set_perusahaan_lihat');
-                $table->integer('set_perusahaan_edit');
-                $table->integer('set_diskon_tax_lihat');
-                $table->integer('set_diskon_tax_edit');
-                $table->integer('hak_otoritas_lihat');
-                $table->integer('hak_otoritas_tambah');
-                $table->integer('hak_otoritas_edit');
-                $table->integer('hak_otoritas_hapus');
-                $table->integer('kategori_lihat');
-                $table->integer('kategori_tambah');
-                $table->integer('kategori_edit');
-                $table->integer('kategori_hapus');
-                $table->integer('gudang_lihat');
-                $table->integer('gudang_tambah');
-                $table->integer('gudang_edit');
-                $table->integer('gudang_hapus');
-                $table->integer('grup_akun_lihat');
-                $table->integer('grup_akun_tambah');
-                $table->integer('grup_akun_edit');
-                $table->integer('grup_akun_hapus');
-                $table->integer('daftar_akun_lihat');
-                $table->integer('daftar_akun_tambah');
-                $table->integer('daftar_akun_edit');
-                $table->integer('daftar_akun_hapus');
-                $table->integer('set_akun_lihat');
-                $table->integer('daftar_pajak_lihat');
-                $table->integer('daftar_pajak_tambah');
-                $table->integer('daftar_pajak_edit');
+                $table->integer('master_data_lihat')->default(0);
+                $table->integer('user_lihat')->default(0);
+                $table->integer('user_tambah')->default(0);
+                $table->integer('user_edit')->default(0);
+                $table->integer('user_hapus')->default(0);
+                $table->integer('satuan_lihat')->default(0);
+                $table->integer('satuan_tambah')->default(0);
+                $table->integer('satuan_edit')->default(0);
+                $table->integer('satuan_hapus')->default(0);
+                $table->integer('jabatan_lihat')->default(0);
+                $table->integer('jabatan_tambah')->default(0);
+                $table->integer('jabatan_edit')->default(0);
+                $table->integer('jabatan_hapus')->default(0);
+                $table->integer('suplier_lihat')->default(0);
+                $table->integer('suplier_tambah')->default(0);
+                $table->integer('suplier_edit')->default(0);
+                $table->integer('suplier_hapus')->default(0);
+                $table->integer('pelanggan_lihat')->default(0);
+                $table->integer('pelanggan_tambah')->default(0);
+                $table->integer('pelanggan_edit')->default(0);
+                $table->integer('pelanggan_hapus')->default(0);
+                $table->integer('item_lihat')->default(0);
+                $table->integer('item_tambah')->default(0);
+                $table->integer('item_edit')->default(0);
+                $table->integer('item_hapus')->default(0);
+                $table->integer('pemasukan_lihat')->default(0);
+                $table->integer('pemasukan_tambah')->default(0);
+                $table->integer('pemasukan_edit')->default(0);
+                $table->integer('pemasukan_hapus')->default(0);
+                $table->integer('pengeluaran_lihat')->default(0);
+                $table->integer('pengeluaran_tambah')->default(0);
+                $table->integer('pengeluaran_edit')->default(0);
+                $table->integer('pengeluaran_hapus')->default(0);
+                $table->integer('komisi_faktur_lihat')->default(0);
+                $table->integer('komisi_faktur_tambah')->default(0);
+                $table->integer('komisi_faktur_edit')->default(0);
+                $table->integer('komisi_faktur_hapus')->default(0);
+                $table->integer('komisi_produk_lihat')->default(0);
+                $table->integer('komisi_produk_tambah')->default(0);
+                $table->integer('komisi_produk_edit')->default(0);
+                $table->integer('komisi_produk_hapus')->default(0);
+                $table->integer('set_perusahaan_lihat')->default(0);
+                $table->integer('set_perusahaan_edit')->default(0);
+                $table->integer('set_diskon_tax_lihat')->default(0);
+                $table->integer('set_diskon_tax_edit')->default(0);
+                $table->integer('hak_otoritas_lihat')->default(0);
+                $table->integer('hak_otoritas_tambah')->default(0);
+                $table->integer('hak_otoritas_edit')->default(0);
+                $table->integer('hak_otoritas_hapus')->default(0);
+                $table->integer('kategori_lihat')->default(0);
+                $table->integer('kategori_tambah')->default(0);
+                $table->integer('kategori_edit')->default(0);
+                $table->integer('kategori_hapus')->default(0);
+                $table->integer('gudang_lihat')->default(0);
+                $table->integer('gudang_tambah')->default(0);
+                $table->integer('gudang_edit')->default(0);
+                $table->integer('gudang_hapus')->default(0);
+                $table->integer('grup_akun_lihat')->default(0);
+                $table->integer('grup_akun_tambah')->default(0);
+                $table->integer('grup_akun_edit')->default(0);
+                $table->integer('grup_akun_hapus')->default(0);
+                $table->integer('daftar_akun_lihat')->default(0);
+                $table->integer('daftar_akun_tambah')->default(0);
+                $table->integer('daftar_akun_edit')->default(0);
+                $table->integer('daftar_akun_hapus')->default(0);
+                $table->integer('set_akun_lihat')->default(0);
+                $table->integer('daftar_pajak_lihat')->default(0);
+                $table->integer('daftar_pajak_tambah')->default(0);
+                $table->integer('daftar_pajak_edit')->default(0);
                 $table->integer('daftar_pajak_hapus')->nullable();
-                $table->integer('poli_lihat');
-                $table->integer('poli_tambah');
-                $table->integer('poli_edit');
-                $table->integer('poli_hapus');
-                $table->integer('kamar_lihat');
-                $table->integer('kamar_tambah');
+                $table->integer('poli_lihat')->default(0);
+                $table->integer('poli_tambah')->default(0);
+                $table->integer('poli_edit')->default(0);
+                $table->integer('poli_hapus')->default(0);
+                $table->integer('kamar_lihat')->default(0);
+                $table->integer('kamar_tambah')->default(0);
                 $table->integer('kamar_edit')->nullable();
                 $table->integer('kamar_hapus')->nullable();
-                $table->integer('penjamin_lihat');
-                $table->integer('penjamin_tambah');
-                $table->integer('penjamin_edit');
-                $table->integer('penjamin_hapus');
-                $table->integer('perujuk_lihat');
-                $table->integer('perujuk_tambah');
-                $table->integer('perujuk_edit');
-                $table->integer('perujuk_hapus');
-                $table->integer('jenis_obat_lihat');
-                $table->integer('jenis_obat_tambah');
-                $table->integer('jenis_obat_edit');
-                $table->integer('jenis_obat_hapus');
-                $table->integer('kelas_kamar_lihat');
-                $table->integer('kelas_kamar_tambah');
-                $table->integer('kelas_kamar_edit');
-                $table->integer('kelas_kamar_hapus');
-                $table->integer('cito_lihat');
+                $table->integer('penjamin_lihat')->default(0);
+                $table->integer('penjamin_tambah')->default(0);
+                $table->integer('penjamin_edit')->default(0);
+                $table->integer('penjamin_hapus')->default(0);
+                $table->integer('perujuk_lihat')->default(0);
+                $table->integer('perujuk_tambah')->default(0);
+                $table->integer('perujuk_edit')->default(0);
+                $table->integer('perujuk_hapus')->default(0);
+                $table->integer('jenis_obat_lihat')->default(0);
+                $table->integer('jenis_obat_tambah')->default(0);
+                $table->integer('jenis_obat_edit')->default(0);
+                $table->integer('jenis_obat_hapus')->default(0);
+                $table->integer('kelas_kamar_lihat')->default(0);
+                $table->integer('kelas_kamar_tambah')->default(0);
+                $table->integer('kelas_kamar_edit')->default(0);
+                $table->integer('kelas_kamar_hapus')->default(0);
+                $table->integer('cito_lihat')->default(0);
                 $table->integer('cito_tambah')->nullable();
-                $table->integer('cito_edit');
-                $table->integer('cito_hapus');
-                $table->integer('operasi_lihat');
-                $table->integer('operasi_tambah');
-                $table->integer('operasi_edit');
-                $table->integer('operasi_hapus');
-                $table->integer('sub_operasi_lihat');
-                $table->integer('sub_operasi_tambah');
-                $table->integer('sub_operasi_edit');
-                $table->integer('sub_operasi_hapus');
-                $table->integer('detail_sub_operasi_lihat');
-                $table->integer('detail_sub_operasi_tambah');
-                $table->integer('detail_sub_operasi_edit');
-                $table->integer('detail_sub_operasi_hapus');
+                $table->integer('cito_edit')->default(0);
+                $table->integer('cito_hapus')->default(0);
+                $table->integer('operasi_lihat')->default(0);
+                $table->integer('operasi_tambah')->default(0);
+                $table->integer('operasi_edit')->default(0);
+                $table->integer('operasi_hapus')->default(0);
+                $table->integer('sub_operasi_lihat')->default(0);
+                $table->integer('sub_operasi_tambah')->default(0);
+                $table->integer('sub_operasi_edit')->default(0);
+                $table->integer('sub_operasi_hapus')->default(0);
+                $table->integer('detail_sub_operasi_lihat')->default(0);
+                $table->integer('detail_sub_operasi_tambah')->default(0);
+                $table->integer('detail_sub_operasi_edit')->default(0);
+                $table->integer('detail_sub_operasi_hapus')->default(0);
             });
 
 
@@ -1660,15 +1661,15 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_pembayaran', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('pembayaran_lihat');
-                $table->integer('pembayaran_hutang_lihat');
-                $table->integer('pembayaran_hutang_tambah');
-                $table->integer('pembayaran_hutang_edit');
-                $table->integer('pembayaran_hutang_hapus');
-                $table->integer('pembayaran_piutang_lihat');
-                $table->integer('pembayaran_piutang_tambah');
-                $table->integer('pembayaran_piutang_edit');
-                $table->integer('pembayaran_piutang_hapus');
+                $table->integer('pembayaran_lihat')->default(0);
+                $table->integer('pembayaran_hutang_lihat')->default(0);
+                $table->integer('pembayaran_hutang_tambah')->default(0);
+                $table->integer('pembayaran_hutang_edit')->default(0);
+                $table->integer('pembayaran_hutang_hapus')->default(0);
+                $table->integer('pembayaran_piutang_lihat')->default(0);
+                $table->integer('pembayaran_piutang_tambah')->default(0);
+                $table->integer('pembayaran_piutang_edit')->default(0);
+                $table->integer('pembayaran_piutang_hapus')->default(0);
             });
 
 
@@ -1678,14 +1679,14 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_pembelian', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('pembelian_lihat');
-                $table->integer('pembelian_tambah');
-                $table->integer('pembelian_edit');
-                $table->integer('pembelian_hapus');
-                $table->integer('retur_pembelian_lihat');
-                $table->integer('retur_pembelian_tambah');
-                $table->integer('retur_pembelian_edit');
-                $table->integer('retur_pembelian_hapus');
+                $table->integer('pembelian_lihat')->default(0);
+                $table->integer('pembelian_tambah')->default(0);
+                $table->integer('pembelian_edit')->default(0);
+                $table->integer('pembelian_hapus')->default(0);
+                $table->integer('retur_pembelian_lihat')->default(0);
+                $table->integer('retur_pembelian_tambah')->default(0);
+                $table->integer('retur_pembelian_edit')->default(0);
+                $table->integer('retur_pembelian_hapus')->default(0);
             });
 
 
@@ -1695,15 +1696,15 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_penjualan', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('penjualan_lihat');
-                $table->integer('penjualan_tambah');
-                $table->integer('penjualan_edit');
-                $table->integer('penjualan_hapus');
-                $table->integer('retur_lihat');
-                $table->integer('retur_penjualan_lihat');
-                $table->integer('retur_penjualan_tambah');
-                $table->integer('retur_penjualan_edit');
-                $table->integer('retur_penjualan_hapus');
+                $table->integer('penjualan_lihat')->default(0);
+                $table->integer('penjualan_tambah')->default(0);
+                $table->integer('penjualan_edit')->default(0);
+                $table->integer('penjualan_hapus')->default(0);
+                $table->integer('retur_lihat')->default(0);
+                $table->integer('retur_penjualan_lihat')->default(0);
+                $table->integer('retur_penjualan_tambah')->default(0);
+                $table->integer('retur_penjualan_edit')->default(0);
+                $table->integer('retur_penjualan_hapus')->default(0);
             });
 
 
@@ -1713,8 +1714,8 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_persediaan', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('persediaan_lihat');
-                $table->integer('kartu_stok_lihat');
+                $table->integer('persediaan_lihat')->default(0);
+                $table->integer('kartu_stok_lihat')->default(0);
             });
 
 
@@ -1724,18 +1725,18 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_registrasi', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('registrasi_lihat');
-                $table->integer('registrasi_rj_lihat');
+                $table->integer('registrasi_lihat')->default(0);
+                $table->integer('registrasi_rj_lihat')->default(0);
                 $table->integer('registrasi_rj_tambah')->nullable();
-                $table->integer('registrasi_rj_edit');
-                $table->integer('registrasi_rj_hapus');
-                $table->integer('registrasi_ri_lihat');
-                $table->integer('registrasi_ri_tambah');
-                $table->integer('registrasi_ri_edit');
-                $table->integer('registrasi_ri_hapus');
+                $table->integer('registrasi_rj_edit')->default(0);
+                $table->integer('registrasi_rj_hapus')->default(0);
+                $table->integer('registrasi_ri_lihat')->default(0);
+                $table->integer('registrasi_ri_tambah')->default(0);
+                $table->integer('registrasi_ri_edit')->default(0);
+                $table->integer('registrasi_ri_hapus')->default(0);
                 $table->integer('registrasi_ugd_lihat')->nullable();
                 $table->integer('registrasi_ugd_tambah')->nullable();
-                $table->integer('registrasi_ugd_edit');
+                $table->integer('registrasi_ugd_edit')->default(0);
                 $table->integer('registrasi_ugd_hapus')->nullable();
             });
 
@@ -1746,19 +1747,19 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_rekam_medik', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('rekam_medik_lihat');
-                $table->integer('rekam_medik_rj_lihat');
-                $table->integer('rekam_medik_rj_tambah');
-                $table->integer('rekam_medik_rj_edit');
-                $table->integer('rekam_medik_rj_hapus');
-                $table->integer('rekam_medik_ri_lihat');
-                $table->integer('rekam_medik_ri_tambah');
-                $table->integer('rekam_medik_ri_edit');
-                $table->integer('rekam_medik_ri_hapus');
-                $table->integer('rekam_medik_ugd_lihat');
-                $table->integer('rekam_medik_ugd_tambah');
-                $table->integer('rekam_medik_ugd_edit');
-                $table->integer('rekam_medik_ugd_hapus');
+                $table->integer('rekam_medik_lihat')->default(0);
+                $table->integer('rekam_medik_rj_lihat')->default(0);
+                $table->integer('rekam_medik_rj_tambah')->default(0);
+                $table->integer('rekam_medik_rj_edit')->default(0);
+                $table->integer('rekam_medik_rj_hapus')->default(0);
+                $table->integer('rekam_medik_ri_lihat')->default(0);
+                $table->integer('rekam_medik_ri_tambah')->default(0);
+                $table->integer('rekam_medik_ri_edit')->default(0);
+                $table->integer('rekam_medik_ri_hapus')->default(0);
+                $table->integer('rekam_medik_ugd_lihat')->default(0);
+                $table->integer('rekam_medik_ugd_tambah')->default(0);
+                $table->integer('rekam_medik_ugd_edit')->default(0);
+                $table->integer('rekam_medik_ugd_hapus')->default(0);
             });
 
 
@@ -1768,10 +1769,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_setting', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('setting_lihat');
-                $table->integer('setting_registrasi_lihat');
-                $table->integer('penetapan_petugas_lihat');
-                $table->integer('printer_lihat');
+                $table->integer('setting_lihat')->default(0);
+                $table->integer('setting_registrasi_lihat')->default(0);
+                $table->integer('penetapan_petugas_lihat')->default(0);
+                $table->integer('printer_lihat')->default(0);
             });
 
 
@@ -1781,10 +1782,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_stok_awal', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('stok_awal_lihat');
-                $table->integer('stok_awal_tambah');
-                $table->integer('stok_awal_edit');
-                $table->integer('stok_awal_hapus');
+                $table->integer('stok_awal_lihat')->default(0);
+                $table->integer('stok_awal_tambah')->default(0);
+                $table->integer('stok_awal_edit')->default(0);
+                $table->integer('stok_awal_hapus')->default(0);
             });
 
 
@@ -1794,10 +1795,10 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_stok_opname', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('stok_opname_lihat');
-                $table->integer('stok_opname_tambah');
+                $table->integer('stok_opname_lihat')->default(0);
+                $table->integer('stok_opname_tambah')->default(0);
                 $table->integer('stok_opname_edit')->nullable();
-                $table->integer('stok_opname_hapus');
+                $table->integer('stok_opname_hapus')->default(0);
             });
 
 
@@ -1807,7 +1808,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	    Schema::create('otoritas_transaksi_kas', function($table) {
                 $table->increments('id');
                 $table->integer('id_otoritas');
-                $table->integer('transaksi_kas_lihat');
+                $table->integer('transaksi_kas_lihat')->default(0);
             });
 
 
