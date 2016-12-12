@@ -1420,7 +1420,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_item_keluar', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('item_keluar_lihat')->default(0);
                 $table->integer('item_keluar_tambah')->default(0);
                 $table->integer('item_keluar_edit')->default(0);
@@ -1434,7 +1434,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_item_masuk', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('item_masuk_lihat')->default(0);
                 $table->integer('item_masuk_tambah')->default(0);
                 $table->integer('item_masuk_edit')->default(0);
@@ -1447,7 +1447,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_kas', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('kas_lihat')->default(0);
                 $table->integer('kas_edit')->default(0);
                 $table->integer('posisi_kas_lihat')->default(0);
@@ -1459,7 +1459,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_kas_keluar', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('kas_keluar_lihat')->default(0);
                 $table->integer('kas_keluar_tambah')->default(0);
                 $table->integer('kas_keluar_edit')->nullable();
@@ -1472,7 +1472,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_kas_masuk', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('kas_masuk_lihat')->default(0);
                 $table->integer('kas_masuk_tambah')->default(0);
                 $table->integer('kas_masuk_edit')->default(0);
@@ -1485,7 +1485,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_kas_mutasi', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('kas_mutasi_lihat')->default(0);
                 $table->integer('kas_mutasi_tambah')->default(0);
                 $table->integer('kas_mutasi_edit')->default(0);
@@ -1498,7 +1498,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_laporan', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('laporan_mutasi_stok_lihat')->default(0);
                 $table->integer('akuntansi_lihat')->default(0);
                 $table->integer('laporan_lihat')->default(0);
@@ -1541,7 +1541,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_master_data', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('master_data_lihat')->default(0);
                 $table->integer('user_lihat')->default(0);
                 $table->integer('user_tambah')->default(0);
@@ -1660,7 +1660,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_pembayaran', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('pembayaran_lihat')->default(0);
                 $table->integer('pembayaran_hutang_lihat')->default(0);
                 $table->integer('pembayaran_hutang_tambah')->default(0);
@@ -1678,7 +1678,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_pembelian', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('pembelian_lihat')->default(0);
                 $table->integer('pembelian_tambah')->default(0);
                 $table->integer('pembelian_edit')->default(0);
@@ -1695,7 +1695,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_penjualan', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('penjualan_lihat')->default(0);
                 $table->integer('penjualan_tambah')->default(0);
                 $table->integer('penjualan_edit')->default(0);
@@ -1713,7 +1713,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_persediaan', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('persediaan_lihat')->default(0);
                 $table->integer('kartu_stok_lihat')->default(0);
             });
@@ -1724,7 +1724,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_registrasi', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('registrasi_lihat')->default(0);
                 $table->integer('registrasi_rj_lihat')->default(0);
                 $table->integer('registrasi_rj_tambah')->nullable();
@@ -1746,7 +1746,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_rekam_medik', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('rekam_medik_lihat')->default(0);
                 $table->integer('rekam_medik_rj_lihat')->default(0);
                 $table->integer('rekam_medik_rj_tambah')->default(0);
@@ -1768,7 +1768,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_setting', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('setting_lihat')->default(0);
                 $table->integer('setting_registrasi_lihat')->default(0);
                 $table->integer('penetapan_petugas_lihat')->default(0);
@@ -1781,7 +1781,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_stok_awal', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('stok_awal_lihat')->default(0);
                 $table->integer('stok_awal_tambah')->default(0);
                 $table->integer('stok_awal_edit')->default(0);
@@ -1794,7 +1794,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_stok_opname', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('stok_opname_lihat')->default(0);
                 $table->integer('stok_opname_tambah')->default(0);
                 $table->integer('stok_opname_edit')->nullable();
@@ -1807,7 +1807,7 @@ class CreateAplikasiSimklinikDatabase extends Migration {
 	     */
 	    Schema::create('otoritas_transaksi_kas', function($table) {
                 $table->increments('id');
-                $table->integer('id_otoritas');
+                $table->integer('id_otoritas')->unique();
                 $table->integer('transaksi_kas_lihat')->default(0);
             });
 

@@ -302,7 +302,7 @@ class TriggerSimKlinik extends Migration{
         DB::unprepared('   
            CREATE TRIGGER `hapus_otoritas` AFTER DELETE ON `hak_otoritas` FOR EACH ROW
             
-
+           BEGIN
                    DELETE FROM otoritas_item_keluar WHERE id_otoritas = old.id;
                    DELETE FROM otoritas_item_masuk WHERE id_otoritas = old.id;
                    DELETE FROM otoritas_kas WHERE id_otoritas = old.id;
@@ -322,7 +322,7 @@ class TriggerSimKlinik extends Migration{
                    DELETE FROM otoritas_registrasi WHERE id_otoritas = old.id;
                    DELETE FROM otoritas_rekam_medik WHERE id_otoritas = old.id;
                    DELETE FROM otoritas_setting WHERE id_otoritas = old.id;
-
+            END
             
         ');
         DB::unprepared('    
